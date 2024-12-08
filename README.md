@@ -1,5 +1,8 @@
 # strontium88
-This is a simple Python Script to calculate the strontium transitions with cooling and trapping parameters. The code is heavily object oriented because of its suitability in repeated calculations with tunable parameters.
+This is a simple Python Script to calculate the strontium transitions with cooling and trapping parameters. The code is heavily object oriented because of its suitability in repeated calculations with tunable parameters. 
+
+Other sophisticated codes exist to calculate the parameters like this does but they are usually slow, are complex to understand and do the calculations by calculating wavefunctions and they were a overkill for my PhD project! Therefore I wrote something easy and light which every AMO physicist requires to calculate but has to do either rely on those big sophisticated codes or do them by hand!
+They have their relevance in other aspects but not for what I wanted!
 
 All the data concerning the transition wavelengths and matrix elements have been taken from official National Institute of Standards and Technology (NIST) data. The data can be viewed in the following paper: 
 By all means, this python script does not contains all the Strontium 88 transitions but includes the ones which are either commonly used or have a large contribution in calculations of those commonly used transitions. You can easily add the data in the process outlined below. I have demonstrated the basic functionality of the code and ways in which you may use this. 
@@ -52,5 +55,6 @@ One can also get very accurate results on Polarisability of the state in SI unit
 
 `SR.Polarisability(stat1, wavelength-in-nm)`
 
-
+## Laser Class and Interaction of Lasers with Atoms
+To be written soon!
 
