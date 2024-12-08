@@ -55,6 +55,6 @@ One can also get very accurate results on Polarisability of the state in SI unit
 
 `SR.Polarisability(stat1, wavelength-in-nm)`
 
-## Laser Class and Interaction of Lasers with Atoms
+# Laser Class and Interaction of Lasers with Atoms
 To be written soon!
 
