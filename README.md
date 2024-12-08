@@ -1,4 +1,4 @@
-# strontium88-calc
+# Strontium88
 This is a simple Python Script to calculate the strontium transitions with cooling and trapping parameters. The code is heavily object oriented because of its suitability in repeated calculations with tunable parameters.
 
 All the data concerning the transition wavelengths and matrix elements have been taken from official National Institute of Standards and Technology (NIST) data. The data can be viewed in the following paper: 
