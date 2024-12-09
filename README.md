@@ -29,7 +29,7 @@ you replace the_path_to_folder with the actual path you copied.
 
 Now you must ensure that numpy library is installed. After that you are good to go! Now just write
 
-`python -i strontium88-calc.py`
+`python -i calc.py`
 
 You will see an introduction comments and you can just start calculating.
 
