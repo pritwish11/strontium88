@@ -75,6 +75,8 @@ One can also get very accurate results on Polarisability of the state in SI unit
 
 `SR.Polarisability(stat1, wavelength-in-nm)`
 
+You can also calculate the DC Polarisability by writing np.inf in the wavelength-in-nm place.
+
 # Laser Class and Interaction of Lasers with Atoms
 To be written soon!
 
