@@ -1,17 +1,37 @@
 # strontium88
-This is a simple Python Script to calculate the strontium transitions with cooling and trapping parameters. The code is heavily object oriented because of its suitability in repeated calculations with tunable parameters. 
+This is a simple Python project made of two scripts to calculate the strontium transitions with cooling and trapping parameters. The code is heavily object oriented because of its suitability in repeated calculations with tunable parameters. 
 
 Other sophisticated codes exist to calculate the parameters like this does but they are usually slow, are complex to understand and do the calculations by calculating wavefunctions and they were a overkill for my PhD project! Therefore I wrote something easy and light which every AMO physicist requires to calculate but has to do either rely on those big sophisticated codes or do them by hand!
-They have their relevance in other aspects but not for what I wanted!
+They however do have their relevance in other aspects!
 
 All the data concerning the transition wavelengths and matrix elements have been taken from official National Institute of Standards and Technology (NIST) data. The data can be viewed in the following paper: 
 By all means, this python script does not contains all the Strontium 88 transitions but includes the ones which are either commonly used or have a large contribution in calculations of those commonly used transitions. You can easily add the data in the process outlined below. I have demonstrated the basic functionality of the code and ways in which you may use this. 
 >[!NOTE]
->I have outlined the basic process of running in the **IDE terminal**. To run in your mac terminal or windows command prompt or your Linux terminal, you can go the directory in which the script is present. Then you can import the script with an alias  name. Then with every object definition of running a method, add 'aliasname.' in front of it.
+>I have outlined the basic process of running in the **terminal**. The process to run it in IDE terminal is fairly easy. Just make sure the directory is correct. If you want to change directory, type in the IDE terminal,
+>
+>`import os`
+>
+>`os.chdir('the_path_to_folder')`
+>
+>Here you replace it with the path
 
+Now you can simply go to section Basic Code Structure.
 
 # What can you do?
 You can calculate the transitions to and from a particular state along with the wavelengthts(nm) and dipole matrix elements(Atomic units). You can calculate the lifetime of states, Polarisability and width of transitions for two particular states. You can also calculate MOT and dipole trapping parameters in the semi-classical two-state model. 
+
+# Where to start?
+First of all, ensure that you have the correct folder added in path. If you are not aware of how to do it, just copy the path of the folder and write
+
+`cd the_path_to_folder`
+
+you replace the_path_to_folder with the actual path you copied.
+
+Now you must ensure that numpy library is installed. After that you are good to go! Now just write
+
+`python -i calc.py`
+
+You will see an introduction comments and you can just start calculating.
 
 # Basic Code Structure
 There are two classes named as SR and LASER. All the calculations are done using the methods of the SR class. The objects of the SR class is the states of the atom on which you want to perform calculations. If you are not calculating the MOT and Optical dipole trapping parameters, this is the only class you'll need. The LASER class defines the laser as an object and will be used for MOT and Dipole Trap Calculations. 
