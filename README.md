@@ -93,5 +93,6 @@ One can also get very accurate results on Polarisability of the state in SI unit
 You can also calculate the DC Polarisability by writing np.inf in the wavelength-in-nm place.
 
 # Laser Class and Interaction of Lasers with Atoms
-All of the above methods did not use the laser profile for calculations. However, when you want to study the interaction of coherent radiation with atoms, specifically in trapping and cooling atoms, we want to employ the laser properties. We assume that the laser to be a Gaussian TEM 00 mode and is defined by its beam width, Power and wavelength in standard units (not SI!). To invoke the laser class, we define it by
-`laser1 = LASER()
+All of the above methods did not use the laser profile for calculations. However, when you want to study the interaction of coherent radiation with atoms, specifically in trapping and cooling atoms, we want to employ the laser properties. We assume that the laser to be a Gaussian TEM 00 mode and is defined by its beam width, Power and wavelength in standard units (not SI!) and in free space. To invoke the laser class, we define it by
+`laser1 = LASER(wavelength, beam width, power)`
+Where you enter the floating inputs. 
