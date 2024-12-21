@@ -20,6 +20,21 @@ Now you can simply go to section Basic Code Structure.
 # What can you do?
 You can calculate the transitions to and from a particular state along with the wavelengthts(nm) and dipole matrix elements(Atomic units). You can calculate the lifetime of states, Polarisability and width of transitions for two particular states. You can also calculate MOT and dipole trapping parameters in the semi-classical two-state model. 
 
+# The Data and Units
+The sr.data file contains all the information required to perform the necessary calculations. The commonly used units like the SI, FPS, MKS are not used here simply the atomic physics has its own set of units which are generally encountered. I have tried to consistently follow the below mentioned units. In the following section, I will refer to them as the standard units (please ignore my abuse of such terms). If no units are mentioned in front of the output, you can simply assume the below units for that:
+
+Wavelength - nm
+
+Dipole Matrix Elements: Atomic Units (charge on an electron * Bohr radius)
+
+Frequency: MHz
+
+Time: $\mu s$
+
+Power: mW
+
+distance: mm
+
 # Where to start?
 First of all, ensure that you have the correct folder added in path. If you are not aware of how to do it, just copy the path of the folder and write
 
@@ -78,4 +93,5 @@ One can also get very accurate results on Polarisability of the state in SI unit
 You can also calculate the DC Polarisability by writing np.inf in the wavelength-in-nm place.
 
 # Laser Class and Interaction of Lasers with Atoms
-To be written soon!
+All of the above methods did not use the laser profile for calculations. However, when you want to study the interaction of coherent radiation with atoms, specifically in trapping and cooling atoms, we want to employ the laser properties. We assume that the laser to be a Gaussian TEM 00 mode and is defined by its beam width, Power and wavelength in standard units (not SI!). To invoke the laser class, we define it by
+`laser1 = LASER()
