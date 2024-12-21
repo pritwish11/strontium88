@@ -94,5 +94,34 @@ You can also calculate the DC Polarisability by writing np.inf in the wavelength
 
 # Laser Class and Interaction of Lasers with Atoms
 All of the above methods did not use the laser profile for calculations. However, when you want to study the interaction of coherent radiation with atoms, specifically in trapping and cooling atoms, we want to employ the laser properties. We assume that the laser to be a Gaussian TEM 00 mode and is defined by its beam width, Power and wavelength in standard units (not SI!) and in free space. To invoke the laser class, we define it by
-`laser1 = LASER(wavelength, beam width, power)`
-Where you enter the floating inputs. 
+
+`laser1 = LASER( beam width, wavelength, power)` 
+
+Where you enter the floating inputs and not strings. Defining the laser will also print the Rayleigh Range for the user's convenience and verifying the validity of Ray optics in their calculations. 
+
+# MOT parameters
+Some essential parameters can also be calculated using the method MOT. Let the lower state be state1 and the higher state be state2. The user just needs to invoke the MOT class and all the important MOT parameters will be printed. The method can be invoked by typing in
+
+`MOT(state1, state2, laser1)`
+
+The user will be returned:
+
+**Capture Velocity** and corresponding energy which is the range of atom's motional velocity within which the MOT acts as an optical molasses with a $-b \vec{v}$ dissipative force. 
+
+The value of $s_0$ which is the **on-resonance saturation parameter** defined by $I/I_s$ where $I_s$ is the saturation intensity.
+
+The minimal achievable **Doppler Temperature** and the **optimal doppler detuning**.
+
+The detuning of the laser defined by the user. 
+
+# Dipole Trap Parameters
+
+Similary, one can also calculate the Optical Dipole Trap parameters by invoking the class 
+
+`DipoleTrap(state1, state2, laser1)`
+
+We will get the following data:
+
+The **Trap Depth**.
+
+The **Trap Frequencies** along the laser beam and in the direction perpendicular to it. 
