@@ -105,12 +105,13 @@ class SR:
 
     def Polarisability(sr88, lamL):
         alpha = 0
+        j_state = int(sr88.j)
         for i in range(len(srdata.srlevel)):
             if srdata.data[SR.ind(sr88)][i][1] != 0:
                 fl = c/lamL
                 f = np.abs( c/srdata.data[SR.ind(sr88)][i][0] )
                 d = srdata.data[SR.ind(sr88)][i][1]
-                alpha = alpha + 2*f*(d**2)/( f**2 - fl**2 )
+                alpha = alpha + (2/3)*(1/(2*j_state + 1))*f*(d**2)/( f**2 - fl**2 )
 
         return (alpha*1e-9*(8.748**2)*1e-60/h)
 
